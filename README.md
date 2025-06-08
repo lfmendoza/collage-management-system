@@ -30,8 +30,8 @@ Sistema completo de gestión universitaria desarrollado con **PostgreSQL** y **N
 
 ```bash
 # 1. Clonar el repositorio
-git clone <repository-url>
-cd universidad-sistema
+git clone https://github.com/lfmendoza/collage-management-system
+cd collage-management-system
 
 # 2. Copiar archivo de configuración
 cp .env.example .env
@@ -61,8 +61,8 @@ curl http://localhost:3000/health
 
 ```bash
 # 1. Clonar el repositorio
-git clone <repository-url>
-cd universidad-sistema
+git clone https://github.com/lfmendoza/collage-management-system
+cd collage-management-system
 
 # 2. Instalar dependencias
 npm install
@@ -418,22 +418,58 @@ GROUP BY 1;
 ### Estructura del Proyecto
 
 ```
-universidad-sistema/
-├── src/
-│   ├── config/           # Configuración BD
-│   ├── models/           # Modelos Sequelize
-│   ├── services/         # Lógica de negocio
-│   ├── controllers/      # Controladores HTTP
-│   ├── routes/           # Rutas Express
-│   ├── middleware/       # Middleware personalizado
-│   └── app.js           # Configuración Express
-├── database/
-│   ├── schema.sql       # Estructura de BD
-│   └── data.sql         # Datos de prueba
-├── docker/              # Configuración Docker
-├── scripts/             # Scripts de setup
-├── tests/               # Pruebas automatizadas
-└── docs/               # Documentación adicional
+collage-management-system/
+├── 📦 package.json                 # Dependencias y scripts
+├── 🔧 .env.example                # Variables de entorno
+├── 📄 README.md                   # Documentación completa
+├── 🚫 .gitignore                  # Archivos a ignorar
+├── 🚀 server.js                   # Servidor principal
+│
+├── 🐳 docker/
+│   ├── docker-compose.yml         # Orquestación Docker
+│   ├── node/Dockerfile           # Imagen Node.js
+│   └── postgres/init.sql         # Inicialización PostgreSQL
+│
+├── 🗃️ database/
+│   ├── schema.sql                # Estructura completa (20 tablas)
+│   └── data.sql                  # Datos de prueba (1000+ registros)
+│
+├── 💻 src/
+│   ├── app.js                    # Configuración Express
+│   ├── config/database.js       # Configuración BD
+│   │
+│   ├── models/                   # ✅ TODOS LOS MODELOS
+│   │   ├── index.js             # Exporta y relaciona todos
+│   │   ├── Estudiante.js        # Modelo estudiante completo
+│   │   ├── Profesor.js          # Modelo profesor completo
+│   │   ├── Materia.js           # Modelo materia completo
+│   │   ├── Seccion.js           # Modelo sección completo
+│   │   ├── Inscripcion.js       # Modelo inscripción completo
+│   │   ├── Facultad.js          # Modelo facultad completo
+│   │   ├── Carrera.js           # Modelo carrera completo
+│   │   ├── Evaluacion.js        # Modelo evaluación completo
+│   │   ├── Nota.js              # Modelo nota completo
+│   │   ├── Pais.js              # Modelo país
+│   │   ├── Departamento.js      # Modelo departamento
+│   │   └── Municipio.js         # Modelo municipio
+│   │
+│   ├── services/                 # Servicios de negocio
+│   │   ├── EstudianteService.js # CRUD estudiantes completo
+│   │   └── SeccionService.js    # CRUD secciones completo
+│   │
+│   ├── routes/                   # Rutas de la API
+│   │   ├── index.js             # Rutas principales
+│   │   ├── estudiantes.js       # Rutas estudiantes
+│   │   ├── secciones.js         # Rutas secciones
+│   │   └── reportes.js          # Rutas reportes
+│   │
+│   └── middleware/
+│       └── errorHandler.js      # Manejo de errores
+│
+└── 🔨 scripts/
+    ├── setup-db.sh             # Configurar BD
+    ├── seed-db.sh              # Cargar datos
+    └── start-dev.sh             # Inicio desarrollo
 ```
 
 ### Contribuir
@@ -602,7 +638,3 @@ curl http://localhost:3000/health
 # Información de BD
 curl http://localhost:3000/api/database-info
 ```
-
----
-
-**¡Feliz desarrollo! 🚀**
