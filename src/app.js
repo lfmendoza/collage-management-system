@@ -10,7 +10,7 @@ const morgan = require("morgan");
 const compression = require("compression");
 
 const routes = require("./routes");
-const errorHandler = require("./middleware/errorHandler");
+const { errorHandler } = require("./middleware/errorHandler");
 
 // Crear aplicación Express
 const app = express();
