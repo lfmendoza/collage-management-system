@@ -8,7 +8,6 @@
 -- ====================================
 -- DATOS GEOGRÁFICOS
 -- ====================================
-
 -- Países
 INSERT INTO paises (nombre, codigo_iso, codigo_telefono) VALUES
 ('Guatemala', 'GT', '+502'),
@@ -851,7 +850,7 @@ INSERT INTO inscripciones (estudiante_id, seccion_id, fecha_inscripcion, nota_fi
 (44, 18, '2024-07-10', 78.75, 'aprobado'),
 (56, 18, '2024-07-10', 91.25, 'aprobado'),
 (64, 18, '2024-07-10', 83.50, 'aprobado'),
-(74, 18, '2024-07-10', 88.00, 'aprobado'),
+(74, 18, '2024-07-10', 88.00, 'aprobado');
 
 -- ====================================
 -- INSCRIPCIONES CICLO 2025-1 (ACTUAL)
@@ -940,7 +939,7 @@ INSERT INTO inscripciones (estudiante_id, seccion_id, fecha_inscripcion, estado)
 (34, 57, '2025-01-10', 'inscrito'), -- Ximena Paola
 (84, 57, '2025-01-10', 'inscrito'), -- Wendy Carolina
 (74, 57, '2025-01-10', 'inscrito'), -- Andrea Gabriela
-(64, 57, '2025-01-10', 'inscrito'), -- Kimberly Paola
+(64, 57, '2025-01-10', 'inscrito'); -- Kimberly Paola
 
 -- ====================================
 -- EVALUACIONES POR SECCIÓN
@@ -977,7 +976,7 @@ INSERT INTO evaluaciones (seccion_id, nombre, tipo, ponderacion, fecha_evaluacio
 (57, 'Segundo Parcial Teórico', 'parcial', 20.00, '2025-04-25', 'Sistemas orgánicos'),
 (57, 'Prácticas de Laboratorio', 'laboratorio', 25.00, NULL, 'Identificación anatómica'),
 (57, 'Examen Final', 'final', 25.00, '2025-05-15', 'Examen práctico y teórico'),
-(57, 'Reportes', 'tarea', 10.00, NULL, 'Informes de prácticas'),
+(57, 'Reportes', 'tarea', 10.00, NULL, 'Informes de prácticas');
 
 -- ====================================
 -- NOTAS PARCIALES (CICLO 2025-1)
@@ -1085,76 +1084,6 @@ INSERT INTO notas (inscripcion_id, evaluacion_id, nota, fecha_calificacion, obse
     91.00, '2025-03-15', 'Destacada'
 );
 
--- ====================================
--- COMPLETAR INSCRIPCIONES CON MÁS ESTUDIANTES
--- ====================================
-
--- Más inscripciones para materias de semestres intermedios y avanzados
-INSERT INTO inscripciones (estudiante_id, seccion_id, fecha_inscripcion, estado) VALUES
--- Base de Datos I - Sección A (2025-1) - Estudiantes de 5to semestre aprox
-(21, 35, '2025-01-10', 'inscrito'), -- Ángel David
-(25, 35, '2025-01-10', 'inscrito'), -- Maximiliano José  
-(27, 35, '2025-01-10', 'inscrito'), -- Bruno Alejandro
-(71, 35, '2025-01-10', 'inscrito'), -- Hugo Alejandro
-(73, 35, '2025-01-10', 'inscrito'), -- Nelson Eduardo
-(75, 35, '2025-01-10', 'inscrito'), -- Cristian Roberto
-(77, 35, '2025-01-10', 'inscrito'), -- Giovanni Estuardo
-
--- Sistemas Operativos - Sección A (2025-1)
-(1, 37, '2025-01-10', 'inscrito'), -- José María (semestre avanzado)
-(3, 37, '2025-01-10', 'inscrito'), -- Carlos Eduardo
-(7, 37, '2025-01-10', 'inscrito'), -- Roberto Carlos
-(11, 37, '2025-01-10', 'inscrito'), -- Fernando José
-(17, 37, '2025-01-10', 'inscrito'), -- Mateo Nicolás
-(51, 37, '2025-01-10', 'inscrito'), -- Alexander José
-(55, 37, '2025-01-10', 'inscrito'), -- Mauricio David
-
--- Ingeniería de Software - Sección A (2025-1) - Estudiantes avanzados
-(1, 39, '2025-01-10', 'inscrito'), -- José María
-(3, 39, '2025-01-10', 'inscrito'), -- Carlos Eduardo
-(51, 39, '2025-01-10', 'inscrito'), -- Alexander José
-(55, 39, '2025-01-10', 'inscrito'), -- Mauricio David
-(59, 39, '2025-01-10', 'inscrito'), -- Enrique Gabriel
-(61, 39, '2025-01-10', 'inscrito'), -- Kevin Rodrigo
-
--- Administración I - Sección A (2025-1)
-(2, 50, '2025-01-10', 'inscrito'), -- Ana Sofía
-(8, 50, '2025-01-10', 'inscrito'), -- Gabriela Isabel
-(12, 50, '2025-01-10', 'inscrito'), -- Valentina María
-(22, 50, '2025-01-10', 'inscrito'), -- Emilia Victoria
-(32, 50, '2025-01-10', 'inscrito'), -- Ariana Beatriz
-(54, 50, '2025-01-10', 'inscrito'), -- Carmen Lucía
-(60, 50, '2025-01-10', 'inscrito'), -- Diana Sofía
-
--- Investigación de Operaciones I - Sección A (2025-1) - Ing. Industrial
-(4, 44, '2025-01-10', 'inscrito'), -- María José
-(9, 44, '2025-01-10', 'inscrito'), -- Diego Alejandro
-(25, 44, '2025-01-10', 'inscrito'), -- Maximiliano José
-(33, 44, '2025-01-10', 'inscrito'), -- Joaquín Sebastián
-(52, 44, '2025-01-10', 'inscrito'), -- Paola Beatriz
-(62, 44, '2025-01-10', 'inscrito'), -- Brenda Marisol
-(69, 44, '2025-01-10', 'inscrito'), -- Rolando José
-
--- Anatomía Humana II - Sección A (2025-1) - Medicina 2do año
-(6, 58, '2025-01-10', 'inscrito'), -- Andrea Paola
-(14, 58, '2025-01-10', 'inscrito'), -- Isabella Sofía
-(24, 58, '2025-01-10', 'inscrito'), -- Sofía Esperanza
-(56, 58, '2025-01-10', 'inscrito'), -- Alejandra Nicole
-(64, 58, '2025-01-10', 'inscrito'), -- Kimberly Paola
-(68, 58, '2025-01-10', 'inscrito'), -- Mónica Esperanza
-(74, 58, '2025-01-10', 'inscrito'), -- Andrea Gabriela
-
--- Técnicas de Estudio - Sección A (2025-1) - Materia de servicio
-(91, 61, '2025-01-10', 'inscrito'), -- Anthony José
-(92, 61, '2025-01-10', 'inscrito'), -- Ingrid Stephanie
-(93, 61, '2025-01-10', 'inscrito'), -- Brandon Esteban
-(94, 61, '2025-01-10', 'inscrito'), -- Sharon Nicole
-(95, 61, '2025-01-10', 'inscrito'), -- Kevin Daniel
-(96, 61, '2025-01-10', 'inscrito'), -- Ashley Paola
-(97, 61, '2025-01-10', 'inscrito'), -- Bryan Eduardo
-(98, 61, '2025-01-10', 'inscrito'), -- Allison María
-(99, 61, '2025-01-10', 'inscrito'), -- Javier Emilio
-(100, 61, '2025-01-10', 'inscrito'); -- Britany Sofía
 
 -- ====================================
 -- ACTUALIZAR DATOS CALCULADOS
@@ -1208,118 +1137,92 @@ INSERT INTO evaluaciones (seccion_id, nombre, tipo, ponderacion, fecha_evaluacio
 (44, 'Tareas', 'tarea', 15.00, NULL, 'Ejercicios semanales'),
 
 -- Evaluaciones para Técnicas de Estudio - Sección A (2025-1)
-(61, 'Evaluación Continua', 'tarea', 60.00, NULL, 'Participación y ejercicios'),
-(61, 'Proyecto Personal', 'proyecto', 40.00, '2025-05-09', 'Plan de estudio personalizado');
+(59, 'Evaluación Continua', 'tarea', 60.00, NULL, 'Participación y ejercicios'),
+(59, 'Proyecto Personal', 'proyecto', 40.00, '2025-05-09', 'Plan de estudio personalizado');
 
 -- ====================================
 -- MÁS NOTAS PARCIALES PARA DIVERSAS MATERIAS
 -- ====================================
 
 -- Notas del Primer Parcial de Base de Datos I - Sección A
-INSERT INTO notas (inscripcion_id, evaluacion_id, nota, fecha_calificacion, observaciones) VALUES
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 21 AND seccion_id = 35), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 35 AND nombre = 'Primer Parcial'), 
-    86.50, '2025-03-25', 'Excelente comprensión del modelo relacional'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 25 AND seccion_id = 35), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 35 AND nombre = 'Primer Parcial'), 
-    79.25, '2025-03-25', 'Buen manejo de álgebra relacional'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 27 AND seccion_id = 35), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 35 AND nombre = 'Primer Parcial'), 
-    92.00, '2025-03-25', 'Destacado en conceptos teóricos'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 71 AND seccion_id = 35), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 35 AND nombre = 'Primer Parcial'), 
-    74.75, '2025-03-25', 'Debe reforzar normalización'
-),
+WITH raw_notas (
+        estudiante_id,
+        seccion_id,
+        evaluacion,
+        nota,
+        fecha_calificacion,
+        observaciones
+) AS (
+    VALUES
+        (21, 37, 'Primer Parcial',      86.50, '2025-03-25', 'Excelente comprensión del modelo relacional'),
+        (25, 37, 'Primer Parcial',      79.25, '2025-03-25', 'Buen manejo de álgebra relacional'),
+        (27, 37, 'Primer Parcial',      92.00, '2025-03-25', 'Destacado en conceptos teóricos'),
+        (71, 31, 'Primer Parcial',      74.75, '2025-03-25', 'Debe reforzar normalización'),
 
--- Notas del Primer Parcial de Sistemas Operativos
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 1 AND seccion_id = 37), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 37 AND nombre = 'Primer Parcial'), 
-    88.75, '2025-03-22', 'Muy buen entendimiento de procesos'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 3 AND seccion_id = 37), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 37 AND nombre = 'Primer Parcial'), 
-    91.50, '2025-03-22', 'Excelente conocimiento teórico'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 7 AND seccion_id = 37), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 37 AND nombre = 'Primer Parcial'), 
-    83.25, '2025-03-22', 'Buen nivel general'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 11 AND seccion_id = 37), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 37 AND nombre = 'Primer Parcial'), 
-    95.00, '2025-03-22', 'Sobresaliente'
-),
+        (1 , 35, 'Primer Parcial',      88.75, '2025-03-22', 'Muy buen entendimiento de procesos'),
+        (3 , 35, 'Primer Parcial',      91.50, '2025-03-22', 'Excelente conocimiento teórico'),
+        (7 , 37, 'Primer Parcial',      83.25, '2025-03-22', 'Buen nivel general'),
+        (11, 37, 'Primer Parcial',      95.00, '2025-03-22', 'Sobresaliente'),
 
--- Notas del Primer Parcial de Administración I
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 2 AND seccion_id = 50), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 50 AND nombre = 'Primer Parcial'), 
-    84.00, '2025-03-17', 'Domina las teorías clásicas'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 8 AND seccion_id = 50), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 50 AND nombre = 'Primer Parcial'), 
-    77.50, '2025-03-17', 'Necesita profundizar conceptos'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 12 AND seccion_id = 50), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 50 AND nombre = 'Primer Parcial'), 
-    89.25, '2025-03-17', 'Excelente análisis crítico'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 22 AND seccion_id = 50), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 50 AND nombre = 'Primer Parcial'), 
-    92.75, '2025-03-17', 'Destacada participación'
-),
+        (2 , 50, 'Primer Parcial',      84.00, '2025-03-17', 'Domina las teorías clásicas'),
+        (8 , 50, 'Primer Parcial',      77.50, '2025-03-17', 'Necesita profundizar conceptos'),
+        (12, 50, 'Primer Parcial',      89.25, '2025-03-17', 'Excelente análisis crítico'),
+        (22, 50, 'Primer Parcial',      92.75, '2025-03-17', 'Destacada participación'),
 
--- Notas del Primer Parcial de Investigación de Operaciones I
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 4 AND seccion_id = 44), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 44 AND nombre = 'Primer Parcial'), 
-    87.00, '2025-03-20', 'Muy buena en optimización'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 9 AND seccion_id = 44), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 44 AND nombre = 'Primer Parcial'), 
-    81.75, '2025-03-20', 'Buen manejo matemático'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 25 AND seccion_id = 44), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 44 AND nombre = 'Primer Parcial'), 
-    93.50, '2025-03-20', 'Excelente razonamiento lógico'
-),
+        (4 , 44, 'Primer Parcial',      87.00, '2025-03-20', 'Muy buena en optimización'),
+        (9 , 44, 'Primer Parcial',      81.75, '2025-03-20', 'Buen manejo matemático'),
+        (25, 44, 'Primer Parcial',      93.50, '2025-03-20', 'Excelente razonamiento lógico'),
 
--- Notas de Evaluación Continua de Técnicas de Estudio
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 91 AND seccion_id = 61), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 61 AND nombre = 'Evaluación Continua'), 
-    88.00, '2025-04-05', 'Muy participativo y organizado'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 92 AND seccion_id = 61), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 61 AND nombre = 'Evaluación Continua'), 
-    85.50, '2025-04-05', 'Buenas técnicas aplicadas'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 93 AND seccion_id = 61), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 61 AND nombre = 'Evaluación Continua'), 
-    91.25, '2025-04-05', 'Excelente mejora en hábitos'
-),
-(
-    (SELECT id FROM inscripciones WHERE estudiante_id = 94 AND seccion_id = 61), 
-    (SELECT id FROM evaluaciones WHERE seccion_id = 61 AND nombre = 'Evaluación Continua'), 
-    79.75, '2025-04-05', 'Debe ser más constante'
-);
+        (91, 61, 'Evaluación Continua', 88.00, '2025-04-05', 'Muy participativo y organizado'),
+        (92, 61, 'Evaluación Continua', 85.50, '2025-04-05', 'Buenas técnicas aplicadas'),
+        (93, 61, 'Evaluación Continua', 91.25, '2025-04-05', 'Excelente mejora en hábitos'),
+        (94, 61, 'Evaluación Continua', 79.75, '2025-04-05', 'Debe ser más constante')
+)
+
+---------------------------------------------
+-- 2. Insertar solo si existen las FKs
+---------------------------------------------
+INSERT INTO notas (
+        inscripcion_id,
+        evaluacion_id,
+        nota,
+        fecha_calificacion,
+        observaciones
+)
+SELECT  i.id,
+        e.id,
+        r.nota,
+        r.fecha_calificacion::date,
+        r.observaciones
+FROM    raw_notas r
+JOIN    inscripciones i
+       ON  i.estudiante_id = r.estudiante_id
+       AND i.seccion_id    = r.seccion_id
+JOIN    evaluaciones e
+       ON  e.seccion_id    = r.seccion_id
+       AND e.nombre        = r.evaluacion
+ON CONFLICT (inscripcion_id, evaluacion_id) DO NOTHING;   -- idempotente
+
+---------------------------------------------
+-- 3. (Opcional) Mostrar faltantes
+---------------------------------------------
+WITH pendientes AS (
+    SELECT r.*, i.id AS insc_id, e.id AS eval_id
+    FROM   raw_notas r
+    LEFT JOIN inscripciones i
+           ON i.estudiante_id = r.estudiante_id
+          AND i.seccion_id    = r.seccion_id
+    LEFT JOIN evaluaciones e
+           ON e.seccion_id    = r.seccion_id
+          AND e.nombre        = r.evaluacion
+    WHERE i.id IS NULL OR e.id IS NULL
+)
+SELECT estudiante_id, seccion_id, evaluacion,
+       CASE
+           WHEN insc_id IS NULL THEN '🚫 Falta inscripción'
+           WHEN eval_id IS NULL THEN '🚫 Falta evaluación'
+       END AS motivo
+FROM pendientes;
 
 -- ====================================
 -- HORARIOS DE PROFESORES Y DISPONIBILIDAD
