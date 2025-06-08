@@ -4,9 +4,9 @@
 -- ====================================
 
 -- Eliminar base de datos si existe y crearla nuevamente
-DROP DATABASE IF EXISTS universidad_sistema;
-CREATE DATABASE universidad_sistema;
-\c universidad_sistema;
+-- DROP DATABASE IF EXISTS universidad_sistema;
+-- CREATE DATABASE universidad_sistema;
+-- \c universidad_sistema;
 
 -- ====================================
 -- TIPOS DE DATOS PERSONALIZADOS

@@ -4,7 +4,6 @@
 -- ====================================
 
 -- Conectar a la base de datos
-\c universidad_sistema;
 
 -- ====================================
 -- DATOS GEOGRÁFICOS
